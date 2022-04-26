@@ -65,10 +65,10 @@
              })
 
              function save() {
-                var form_data = new FormData($('#upload-file')[0]);
+                 var form_data = new FormData($('#upload-file')[0]);
                 $.ajax({
                     type: 'POST',
-                    url: '{EB URL}/fileupload',
+                    url: 'http://pythonapp-env.eba-qejt3ncv.ap-northeast-2.elasticbeanstalk.com//fileupload',
                     data: form_data,
                     processData: false,
                     contentType: false,
