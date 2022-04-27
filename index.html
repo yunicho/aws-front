@@ -57,7 +57,7 @@
             var form_data = new FormData($('#upload-file')[0]);
             $.ajax({
                 type: 'POST',
-                url: 'http://pythonapp-env.eba-qejt3ncv.ap-northeast-2.elasticbeanstalk.com//fileupload',
+                url: 'http://pythonapp-envi.eba-qejt3ncv.ap-northeast-2.elasticbeanstalk.com/fileupload',
                 data: form_data,
                 processData: false,
                 contentType: false,
@@ -71,7 +71,7 @@
         function getFiles() {
             $.ajax({
                 type: 'GET',
-                url: 'http://pythonapp-env.eba-qejt3ncv.ap-northeast-2.elasticbeanstalk.com//files',
+                url: 'http://pythonapp-envi.eba-qejt3ncv.ap-northeast-2.elasticbeanstalk.com/files',
                 success: function (data) {
                     for(let i = 0 ; i < data['files'].length ; i++){
                         makeCard(data['files'][i]);
@@ -95,7 +95,7 @@
         function getCount() {
             $.ajax({
                 type: 'GET',
-                url: 'http://pythonapp-env.eba-qejt3ncv.ap-northeast-2.elasticbeanstalk.com/file/count',
+                url: 'http://pythonapp-envi.eba-qejt3ncv.ap-northeast-2.elasticbeanstalk.com/file/count',
                 success: function (data) {
                     $("#count").html(data.count);
                 },
